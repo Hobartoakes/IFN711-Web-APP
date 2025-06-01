@@ -1,55 +1,55 @@
-# 设备信息查询与预测系统
+# Device Information Query and Prediction System
 
-一个基于Flask的设备信息管理系统，允许用户登录、注册、查看和添加设备信息。
+A device information management system built with Flask, allowing users to register, log in, view, and add device details.
 
-## 功能特点
+## Features
 
-- 用户登录与注册
-- 设备信息展示与搜索
-- 添加新设备
-- 支持精确购买日期或估计日期范围
+- User login and registration  
+- Device information display and search  
+- Add new devices  
+- Support for exact purchase dates or estimated date ranges  
 
-## 技术栈
+## Tech Stack
 
-- Flask (Python Web框架)
-- MySQL (数据库)
-- HTML/CSS
-- Tailwind CSS (样式类)
-- Font Awesome (图标)
+- Flask (Python web framework)  
+- MySQL (database)  
+- HTML/CSS  
+- Tailwind CSS (utility-first CSS framework)  
+- Font Awesome (icon library)  
 
-## 安装与运行
+## Installation and Running
 
-1. 确保已安装Python和MySQL
+1. Make sure Python and MySQL are installed.
 
-2. 创建MySQL数据库
+2. Create the MySQL database:
 
-```sql
-CREATE DATABASE device_management;
-```
+    ```sql
+    CREATE DATABASE device_management;
+    ```
 
-3. 安装所需Python包
+3. Install required Python packages:
 
-```bash
-pip install flask pymysql
-```
+    ```bash
+    pip install flask pymysql
+    ```
 
-4. 运行应用
+4. Run the application:
 
-```bash
-python app.py
-```
+    ```bash
+    python app.py
+    ```
 
-5. 在浏览器中访问 http://127.0.0.1:5000
+5. Open your browser and go to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-## 数据库配置
+## Database Configuration
 
-- 数据库名称: device_management
-- 用户名: root
-- 密码: 987654321
+- Database name: `device_management`  
+- Username: `root`  
+- Password: `987654321`  
 
-## 页面说明
+## Page Descriptions
 
-1. 登录页 - 用户登录系统
-2. 注册页 - 新用户注册
-3. 设备信息页 - 展示设备列表，支持搜索
-4. 新增设备页 - 添加新设备信息
+1. **Login Page** – For existing users to log into the system  
+2. **Registration Page** – For new users to sign up  
+3. **Device Information Page** – Displays the list of devices and supports search  
+4. **Add Device Page** – Allows users to add new device details
