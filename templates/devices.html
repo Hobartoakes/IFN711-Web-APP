@@ -26,10 +26,11 @@
                     <th>Asset Number</th>
                     <th>Asset Name</th>
                     <th>Asset Type</th>
+                    <th>Asset Manufacturer</th>
                     <th>Purchase Cost</th>
                     <th>Purchase Date</th>
                     <th>Condition</th>
-                    <th>Storage</th>
+                    <th>Storage Type</th>
                     <th>Details</th>
                     <th>Operation</th>
                 </tr>
@@ -40,6 +41,7 @@
                     <td>{{ device.asset_number }}</td>
                     <td>{{ device.asset_name }}</td>
                     <td>{{ device.asset_type }}</td>
+                    <td>{{ device.asset_manufacturer or 'Not specified' }}</td>
                     <td>${{ device.purchase_cost }}</td>
                     <td>
                         {% if device.purchase_date %}
@@ -51,7 +53,7 @@
                         {% endif %}
                     </td>
                     <td>{{ device.asset_condition }}</td>
-                    <td>{{ device.asset_storage }}</td>
+                    <td>{{ device.storage_type }}</td>
                     <td>
                         <button class="btn btn-primary" style="padding: 0.5rem;" onclick="alert('{{ device.details }}')">
                             <i class="fas fa-info-circle"></i> View
@@ -92,7 +94,7 @@ function evaluateDevice(assetNumber, condition, assetType, purchaseDate, estimat
     })
     .then(response => response.json())
     .then(data => {
-        alert('Predict Price: $' + data.price.toFixed(2));
+        alert('Predict Mean Price: $' + data.mean_price.toFixed(2) + ' (Min: $' + data.min_price.toFixed(2) + ' - Max: $' + data.max_price.toFixed(2) + ')');
     })
     .catch(error => {
         console.error('Error:', error);

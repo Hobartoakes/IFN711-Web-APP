@@ -20,10 +20,15 @@
             <label for="asset_type" class="form-label">Asset Type</label>
             <select id="asset_type" name="asset_type" class="form-select" required>
                 <option value="">Select Asset Type</option>
-                <option value="Indoor Warehouse">Indoor Warehouse</option>
-                <option value="Outdoor Warehouse">Outdoor Warehouse</option>
-                <option value="Uncovered">Uncovered</option>
+                <option value="Equipment">Equipment</option>
+                <option value="Part">Part</option>
+                <option value="Consumable">Consumable</option>
             </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="asset_manufacturer" class="form-label">Asset Manufacturer</label>
+            <input type="text" id="asset_manufacturer" name="asset_manufacturer" class="form-input">
         </div>
         
         <div class="form-group">
@@ -78,8 +83,13 @@
         </div>
         
         <div class="form-group">
-            <label for="asset_storage" class="form-label">Asset Storage (GB)</label>
-            <input type="number" id="asset_storage" name="asset_storage" class="form-input" required>
+            <label for="storage_type" class="form-label">Storage Type</label>
+            <select id="storage_type" name="storage_type" class="form-select" required>
+                <option value="">Select Storage Type</option>
+                <option value="Indoor Warehouse">Indoor Warehouse</option>
+                <option value="Outdoor Warehouse">Outdoor Warehouse</option>
+                <option value="Uncovered">Uncovered</option>
+            </select>
         </div>
         
         <div style="display: flex; gap: 1rem;">
